@@ -2,8 +2,8 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.github.y_okumura.example</groupId>
-  <artifactId>jasper_reports.table_base</artifactId>
+  <groupId>io.github.y-okumura.example</groupId>
+  <artifactId>jasper-reports.table-base-example</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
@@ -11,7 +11,7 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <maven.compiler.source>1.8</maven.compiler.source>
     <tomee.version>8.0.0-M3</tomee.version>
-    <final.name>jasper_reports.table_base</final.name>
+    <final.name>jasper-reports.table-base-example</final.name>
   </properties>
   <dependencies>
     <dependency>
@@ -37,7 +37,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>jasper_reports.table_base</finalName>
+    <finalName>jasper-reports.table-base-example</finalName>
     <plugins>
         <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
