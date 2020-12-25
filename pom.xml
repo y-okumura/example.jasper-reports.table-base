@@ -2,8 +2,8 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.github.y_okumura</groupId>
-  <artifactId>example.jasper_reports.table_base</artifactId>
+  <groupId>io.github.y_okumura.example</groupId>
+  <artifactId>jasper_reports.table_base</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
@@ -11,7 +11,7 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <maven.compiler.source>1.8</maven.compiler.source>
     <tomee.version>8.0.0-M3</tomee.version>
-    <final.name>example.jasper_reports.table_base</final.name>
+    <final.name>jasper_reports.table_base</final.name>
   </properties>
   <dependencies>
     <dependency>
@@ -21,9 +21,33 @@
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
+
+    <!-- dependencies for junit test -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
-    <finalName>example.jasper_reports.table_base</finalName>
+    <finalName>jasper_reports.table_base</finalName>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
+        </plugin>
+        <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.22.2</version>
+        </plugin>
+    </plugins>
   </build>
   <profiles>
     <profile>
