@@ -18,3 +18,10 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn package
+    - name: Archive test report
+      if: always()
+      uses: actions/upload-artifact@v1
+      with:
+        name: Generate test report
+        run: mvn site -Dmaven.test.failure.ignore=true surefire-report:report-only
+  
